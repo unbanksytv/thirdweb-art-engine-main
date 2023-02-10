@@ -1,0 +1,44 @@
+{
+  "name": "thirdweb-art-engine",
+  "version": "1.2.0",
+  "description": "The forked version of HashLips Art Engine with better features and compatibility with thirdweb.",
+  "main": "index.js",
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "layers/**/*",
+      "node_modules/**/*",
+      "src/**/*"
+    ]
+  },
+  "scripts": {
+    "generate": "node index.js",
+    "build": "yarn generate",
+    "rarity": "node utils/rarity.js table",
+    "pixelate": "node utils/pixelate.js",
+    "reset": "node utils/reset.js",
+    "preview": "node utils/preview.js",
+    "preview:gif": "node utils/preview_gif.js",
+    "meta:update": "node utils/metadata_update.js",
+    "meta:generate": "node utils/metadata_generate.js",
+    "thirdweb": "yarn thirdweb:prepare",
+    "thirdweb:prepare": "node utils/thirdweb_prepare.js",
+    "thirdweb:upload": "node utils/thirdweb_upload.js"
+  },
+  "contributors": [
+    {
+      "name": "Daniel Eugene Botha (HashLips)"
+    },
+    {
+      "name": "Waren Gonzaga"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@thirdweb-dev/sdk": "^3.6.10",
+    "@thirdweb-dev/storage": "^1.0.6",
+    "canvas": "^2.8.0",
+    "gif-encoder-2": "^1.0.5",
+    "sha1": "^1.1.1"
+  }
+}
